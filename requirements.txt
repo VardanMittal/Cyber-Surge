@@ -1,0 +1,10 @@
+scrapy
+selenium
+scikit-learn
+tensorflow
+keras-tuner
+numpy
+matplotlib
+seaborn
+requests
+python-dotenv
