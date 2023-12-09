@@ -6,3 +6,6 @@ keras-tuner
 numpy
 matplotlib
 python-dotenv
+stem
+pysocks
+beautifulsoup4
