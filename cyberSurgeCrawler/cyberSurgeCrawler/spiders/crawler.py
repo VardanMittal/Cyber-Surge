@@ -5,4 +5,5 @@ class CyberSurge(scrapy.Spider):
     start_urls = ["https://en.wikipedia.org/wiki/Main_Page"]
     def parse(self, response):
         title = response.css(".dyk-img+ ul li::text").extract()
-        yield {"titletext": title}
+        data = {"titletext": title}
+        print(data)
