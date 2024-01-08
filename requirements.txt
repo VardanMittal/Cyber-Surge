@@ -9,3 +9,4 @@ python-dotenv
 stem
 pysocks
 beautifulsoup4
+NLTK
