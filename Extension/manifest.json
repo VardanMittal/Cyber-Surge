@@ -1,16 +1,41 @@
 {
-  "manifest_version": 3,
-  "name": "Cyber Surge",
-  "version": "0.1.0",
-  "description": "This tools helps you to surf darkweb safely!!",
-  "icons": {
-    "48": "icons/Icon_48.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://*.google.com/search?*"],
-      "js": ["urls_extraction.js"]
-    }
-  ],
-  "permissions": ["<all_urls>", "tabs", "find", "webRequest", "geolocation"]
+	"manifest_version": 2,
+	"name": "Extension",
+	"description": "\"This is a browser based extension for safe dark web surfing\"",
+	"version": "0.0.1",
+	"icons": {
+		"64": "icons/icon.png"
+	},
+	"background": {
+		"scripts": [
+			"background_script.js"
+		]
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.mozilla.org/*"
+			],
+			"js": [
+				"content_script.js"
+			]
+		}
+	],
+	"browser_action": {
+		"default_icon": {
+			"64": "icons/icon.png"
+		},
+		"default_popup": "browserAction/index.html",
+		"default_title": "Extension"
+	},
+	"page_action": {
+		"default_icon": {
+			"64": "icons/icon.png"
+		},
+		"default_popup": "pageAction/index.html",
+		"default_title": "Extension"
+	},
+	"options_ui": {
+		"page": "options/index.html"
+	}
 }
