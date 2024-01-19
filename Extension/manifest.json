@@ -12,5 +12,5 @@
       "js": ["urls_extraction.js"]
     }
   ],
-  "permissions": ["webRequest"]
+  "permissions": ["<all_urls>", "tabs", "find", "webRequest", "geolocation"]
 }
