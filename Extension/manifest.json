@@ -1,8 +1,8 @@
 {
-  "manifest_version": 2,
-  "name": "Extension",
+  "manifest_version": 3,
+  "name": "Cyber Surge",
   "description": "\"This is a browser based extension for safe dark web surfing\"",
-  "version": "0.0.1",
+  "version": "1",
   "icons": {
     "64": "icons/icon.png"
   },
@@ -31,5 +31,22 @@
   },
   "options_ui": {
     "page": "options/index.html"
-  }
+  },
+  "permissions": [
+    "geolocation",
+    "storage",
+    "activeTab",
+    "webRequest",
+    "webRequestBlocking",
+    "http:///",
+    "https:///",
+    "tabs",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "http://localhost/*",
+    "https://api.mydomain.com/*",
+    "https://*.myvpn.com/",
+    "<all_urls>"
+  ]
 }

@@ -2,6 +2,8 @@
 
 Main Document- https://extensionworkshop.com/documentation/develop/
 
+Anatomy of extensions - https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
+
 Permission URL - https://extensionworkshop.com/documentation/develop/request-the-right-permissions/
 
 Polyfill-
