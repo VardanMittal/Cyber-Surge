@@ -11,17 +11,14 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.mozilla.org/*"],
+      "matches": [
+        "*://*.mozilla.org/*",
+        "*://*.google.com/search?*",
+        "*://*.duckduckgo.com/*"
+      ],
       "js": ["content_script.js"]
     }
   ],
-  "browser_action": {
-    "default_icon": {
-      "64": "icons/icon.png"
-    },
-    "default_popup": "browserAction/index.html",
-    "default_title": "Extension"
-  },
   "page_action": {
     "default_icon": {
       "64": "icons/icon.png"
@@ -29,17 +26,11 @@
     "default_popup": "pageAction/index.html",
     "default_title": "Extension"
   },
-  "options_ui": {
-    "page": "options/index.html"
-  },
   "permissions": [
     "geolocation",
     "storage",
     "activeTab",
     "webRequest",
-    "webRequestBlocking",
-    "http:///",
-    "https:///",
     "tabs",
     "webNavigation"
   ],
