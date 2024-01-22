@@ -1,2 +1,10 @@
-// Put all the javascript code here, that you want to execute in background.
-browser.body.style.backgroundColor = "red";
+const mongoose = require("mongoose");
+const express = require("express");
+
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "data") {
+    const extractedData = message.data;
+
+    console.log("Received URLs from content script:", extractedData);
+  }
+});
